@@ -1,10 +1,8 @@
 .tickets {
-  min-height: 100vh;
-  padding: 10px 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  justify-content: center;
   align-items: center;
 }
 
@@ -53,7 +51,7 @@
   font-size: var(--font-size-third);
 }
 
-.textTitile {
+.textTitle {
   color: var(--text-color-secondary);
   margin-right: 10px;
 }
@@ -68,13 +66,20 @@
   font-size: var(--font-size-third);
 }
 
-.discription {
+.description {
   color: var(--text-color-secondary);
   font-size: var(--font-size-third);
   margin: 24px 0 5px;
 }
 
-.blokDiscription {
+.counter {
+  align-self: flex-end;
+  color: var(--text-color-third);
+  font-size: var(--font-size-error);
+  margin-top: 6px;
+}
+
+.blockDescription {
   color: var(--text-color-secondary);
   font-size: var(--font-size-third);
   margin-top: 20px;
@@ -86,6 +91,23 @@
   border-bottom: 2px solid var(--bg-color-secondary);
   color: var(--text-color-primary);
   font-size: var(--font-size-third);
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid var(--text-color-secondary);
+  }
+}
+
+.textarea {
+  padding: 10px 0;
+  border-bottom: 2px solid var(--bg-color-secondary);
+  color: var(--text-color-primary);
+  font-size: var(--font-size-third);
+  resize: vertical;
+  min-height: 80px;
+  width: 100%;
+  background: transparent;
+  font-family: inherit;
 
   &:focus {
     outline: none;
@@ -146,6 +168,21 @@
   margin-top: 6px;
 }
 
+.empty {
+  color: var(--text-color-third);
+  font-size: var(--font-size-third);
+  text-align: center;
+}
+
+.fileLink {
+  color: var(--text-color-secondary);
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 .link {
   width: calc(80vw - 10px);
   max-width: 900px;
@@ -175,24 +212,5 @@
 
   &:hover .linkText {
     color: var(--text-color-primary);
-  }
-}
-
-.ticketsList {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  gap: 20px;
-  list-style-type: none;
-}
-
-.ticketItem {
-  color: var(--text-color-third);
-  text-decoration: none;
-  cursor: pointer;
-  font-size: var(--font-size-third);
-
-  &:hover {
-    color: var(--text-color-secondary);
   }
 }

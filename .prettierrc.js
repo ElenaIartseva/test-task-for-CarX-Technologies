@@ -1,7 +1,7 @@
-module.exports = {
+export default {
   tabWidth: 2,
   printWidth: 80,
-  endOfLine: 'auto',
+  endOfLine: 'lf',
   arrowParens: 'avoid',
   trailingComma: 'none',
   semi: true,

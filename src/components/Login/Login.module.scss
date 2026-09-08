@@ -45,14 +45,15 @@
   font-size: var(--font-size-third);
 }
 
-.discription {
+.description {
   color: var(--text-color-secondary);
   font-size: var(--font-size-third);
   margin: 24px 0 5px;
 }
 
 .input {
-  width: calc(100% - 10px);
+  box-sizing: border-box;
+  width: 100%;
   padding: 10px 0;
   border-bottom: 2px solid var(--bg-color-secondary);
   color: var(--text-color-primary);
@@ -64,8 +65,16 @@
   }
 }
 
+.passwordField {
+  position: relative;
+  width: 100%;
+}
+
+.passwordInput {
+  padding-right: 52px;
+}
+
 .inputError {
-  font-size: 10px;
   color: var(--text-color-error);
   margin-top: 10px;
   margin-left: 0;
@@ -76,7 +85,7 @@
 
 .btn {
   margin-top: 90px;
-  width: calc(100% - 10px);
+  width: 100%;
   height: 45px;
   background-color: var(--bg-color-secondary);
   border-radius: var(--border-radius);
@@ -94,34 +103,31 @@
   }
 }
 
-.img {
+.passwordVisibilityBtn {
   position: absolute;
+  left: auto;
   right: 10px;
-  top: 54px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.img {
+  display: block;
   width: 30px;
   height: 22px;
 
   &:hover {
     opacity: 0.6;
-    cursor: pointer;
   }
-}
-
-.register {
-  display: flex;
-  flex-direction: row;
-}
-
-.text,
-.signupLink {
-  color: var(--text-color-third);
-  font-size: var(--font-size-third);
-}
-
-.signupLink {
-  color: var(--text-color-secondary);
-  margin: 0 0 0 10px;
-  text-decoration: none;
 }
 
 @media (max-width: 920px) {
@@ -133,16 +139,5 @@
 @media (max-width: 600px) {
   .container {
     width: calc(80vw - 10px);
-  }
-}
-
-@media (max-width: 460px) {
-  .register {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .signupLink {
-    margin-left: 0;
   }
 }
